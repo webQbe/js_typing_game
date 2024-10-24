@@ -1,3 +1,6 @@
+// Listen for Page Load
+window.addEventListener('load', init);
+
 // Globals
 let time = 5;
 let score = 0;
@@ -22,3 +25,10 @@ const words = [
     "watermelon", "xigua", "yam", "zucchini", "apricot",
     "blueberry", "coconut", "date", "elderflower", "fig"
 ];
+
+// Initialize Game
+function init(){
+
+    console.log('Game started!');
+
+}
