@@ -32,8 +32,11 @@ function init(){
     // Load word from array
     showWord(words);
 
-    // Call countdown every second
+    // Call countdown() every second
     setInterval(countdown, 1000);
+
+    // Call checkStatus() every 50ms
+    setInterval(checkStatus, 50);
 
 }
 
@@ -59,11 +62,23 @@ function countdown(){
 
     } else if(time === 0){
 
-        // Game over
+        // Game is over
         isPlaying = false;
 
     }
 
     // Display time
     timeDisplay.innerHTML = time;
+}
+
+// Check game status
+function checkStatus(){
+
+    // Check if game is over & no time left
+    if(!isPlaying && time === 0){
+
+        message.innerHTML = 'Game Over!!!';
+
+    }
+
 }
