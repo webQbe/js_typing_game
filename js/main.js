@@ -32,6 +32,9 @@ function init(){
     // Load word from array
     showWord(words);
 
+    // Call countdown every second
+    setInterval(countdown, 1000);
+
 }
 
 // Pick & show random word
@@ -43,4 +46,24 @@ function showWord(words){
     // Output random word
     currentWord.innerHTML = words[randIndex];
 
+}
+
+// Countdown timer
+function countdown(){
+
+    // Check time limit
+    if(time > 0){
+
+        // Count down
+        time--;
+
+    } else if(time === 0){
+
+        // Game over
+        isPlaying = false;
+
+    }
+
+    // Display time
+    timeDisplay.innerHTML = time;
 }
