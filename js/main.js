@@ -32,6 +32,9 @@ function init(){
     // Load word from array
     showWord(words);
 
+    // Match input text
+    wordInput.addEventListener('input', matchWords);
+
     // Call countdown() every second
     setInterval(countdown, 1000);
 
@@ -39,6 +42,27 @@ function init(){
     setInterval(checkStatus, 50);
 
 }
+
+
+// Match user input with current word
+function matchWords(){
+
+    // Check if currentWord value to wordInput text
+    if(wordInput.value === currentWord.innerHTML){
+
+        message.innerHTML = 'Correct!!!';
+        return true;
+
+    } else {
+
+        message.innerHTML = '';
+        return false;
+
+    }
+
+}
+
+
 
 // Pick & show random word
 function showWord(words){
