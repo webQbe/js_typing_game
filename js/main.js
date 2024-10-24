@@ -56,8 +56,19 @@ function startMatch(){
         score++; // Increment score by 1
 
     }
+    
+    // If score is -1, display 0
+    if(score === -1){
 
-    scoreDisplay.innerHTML = score;
+        scoreDisplay.innerHTML = 0;
+
+
+    } else {
+
+        scoreDisplay.innerHTML = score;
+
+    }
+
     
 
 }
