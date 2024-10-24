@@ -58,6 +58,7 @@ function startMatch(){
     }
 
     scoreDisplay.innerHTML = score;
+    
 
 }
 
@@ -119,6 +120,11 @@ function checkStatus(){
     if(!isPlaying && time === 0){
 
         message.innerHTML = 'Game Over!!!';
+        
+        // Reset score with -1
+        // Count down stops when game is over
+        // Do not add point for first word after game is over
+        score = -1;
 
     }
 
