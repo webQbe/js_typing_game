@@ -13,3 +13,12 @@ const message = document.querySelector('#message');
 const seconds = document.querySelector('#seconds');
 
 
+// Word Array
+const words = [
+    "apple", "banana", "cherry", "dragonfruit", "elderberry",
+    "fig", "grape", "honeydew", "kiwi", "lemon",
+    "mango", "nectarine", "orange", "papaya", "quince",
+    "raspberry", "strawberry", "tangerine", "ugli", "violet",
+    "watermelon", "xigua", "yam", "zucchini", "apricot",
+    "blueberry", "coconut", "date", "elderflower", "fig"
+];
