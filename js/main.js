@@ -33,7 +33,7 @@ function init(){
     showWord(words);
 
     // Match input text
-    wordInput.addEventListener('input', matchWords);
+    wordInput.addEventListener('input', startMatch);
 
     // Call countdown() every second
     setInterval(countdown, 1000);
@@ -43,6 +43,23 @@ function init(){
 
 }
 
+// Start matching 
+function startMatch(){
+
+    // Check if matchWords() returns true or false
+    if(matchWords()){
+
+        isPlaying = true;
+        time = 6; // Reset time (1 above init time)
+        showWord(words); // Show new word
+        wordInput.value = ''; // Clear text input
+        score++; // Increment score by 1
+
+    }
+
+    scoreDisplay.innerHTML = score;
+
+}
 
 // Match user input with current word
 function matchWords(){
